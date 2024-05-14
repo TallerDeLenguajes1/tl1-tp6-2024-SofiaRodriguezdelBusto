@@ -55,21 +55,21 @@ do
        switch (op)
        {
         case 1:
-               float suma = Suma(num1,num2); 
+               float suma = num1 + num2; 
                Console.WriteLine($"\nLa suma de los numeros es {suma}");
                break;
         case 2:
-               float resta = Resta(num1,num2);
+               float resta = num1 - num2;
                Console.WriteLine($"\nLa diferencia de los numeros es {resta}");
                break;
         case 3:
-               float producto = Producto(num1,num2);
+               float producto = num1*num2;
                Console.WriteLine($"\nEl producto de los numeros es {producto}");
                break;
         case 4:
                if(num2 != 0)
                {
-                  float cociente = Division(num1,num2);
+                  float cociente = num1/num2;
                   Console.WriteLine($"\nEl producto de los numeros es {cociente}");
                }else{
                   Console.WriteLine("\nNo se puede dividir en 0");
@@ -85,21 +85,3 @@ do
     }
 }while (controla != 0);
 
-
-static float Suma(float a, float b)
-{
-   return a+b;
-}
-static float Resta(float a, float b)
-{
-   return a-b;
-}
-
-static float Producto(float a, float b)
-{
-   return a*b;
-}
-static float Division(float a, float b)
-{
-   return a/b;
-}
