@@ -45,12 +45,16 @@ do
     Console.WriteLine("\nElija la operacion que desea realizar: ");
     string operacion = Console.ReadLine(); 
     int op;
-    Console.WriteLine("\nIngrese el primer numero: ");
-    string n1 = Console.ReadLine(); 
-    float num1;
-    string n2 = Console.ReadLine(); 
-    float num2;
-    if(int.TryParse(operacion, out op) && float.TryParse(n1, out num1) && float.TryParse(n2, out num2))
+    string n1, n2;
+    float num1, num2;
+    do
+    {
+      Console.WriteLine("\nIngrese el primer numero: ");
+      n1 = Console.ReadLine(); 
+      n2 = Console.ReadLine();
+    } while (!(float.TryParse(n1, out num1) && float.TryParse(n2, out num2)));
+
+    if(int.TryParse(operacion, out op))
     {
        switch (op)
        {
@@ -81,7 +85,7 @@ do
     string control = Console.ReadLine();
     if(!int.TryParse(control, out controla))
     {
-       controla = 1;
+      controla = 1;
     }
 }while (controla != 0);
 
