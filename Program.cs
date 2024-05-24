@@ -26,8 +26,10 @@ if(int.TryParse(cadena, out num))
       }
    }
    Console.WriteLine($"El numero invertido es: {numInvertido}");
+}else
+{
+   Console.WriteLine("No ha ingresado un numero");
 }
-Console.WriteLine("No ha ingresado un numero");
 
 Console.WriteLine("-------Ejercicio 4---------");
 Console.WriteLine("Ingrese una cadena");
@@ -83,21 +85,21 @@ do
       {
          case 1:
                float suma = num1 + num2; 
-               Console.WriteLine("\nLa suma de"+num1+ "y de"+num2+"es"+suma);
+               Console.WriteLine("\nLa suma de "+num1+ " y de "+num2+" es "+suma);
                break;
          case 2:
                float resta = num1 - num2;
-               Console.WriteLine("\nLa diferencia de"+num1+ "y de"+num2+"es"+resta);
+               Console.WriteLine("\nLa diferencia de "+num1+ " y de "+num2+" es "+resta);
                break;
          case 3:
                float producto = num1*num2;
-               Console.WriteLine("\nEl producto de"+num1+ "y de"+num2+"es"+producto);
+               Console.WriteLine("\nEl producto de "+num1+ " y de "+num2+" es "+producto);
                break;
          case 4:
                if(num2 != 0)
                {
                   float cociente = num1/num2;
-                  Console.WriteLine("\nEl cociente entre"+num1+ "y"+num2+"es"+cociente);
+                  Console.WriteLine("\nEl cociente entre "+num1+ " y "+num2+" es "+cociente);
                }else{
                   Console.WriteLine("\nNo se puede dividir en 0");
                }
@@ -206,7 +208,7 @@ if (expresion.Contains('+'))
    {
       error = 1; 
    }
-}else if (op.Contains('/'))
+}else if (expresion.Contains('/'))
 {
    operandos = expresion.Split('/');
    if (float.TryParse(operandos[0].Trim(), out operando1) && float.TryParse(operandos[1].Trim(), out operando2))
@@ -231,7 +233,7 @@ if (error == 1)
    Console.WriteLine($"Operando no válidos\n");
 }else
 {
-   Console.WriteLine("El resultado de la expresion es", respuesta);
+   Console.WriteLine($"El resultado de la expresion es {respuesta}");
 }
 
 Console.WriteLine("-------Ejercicio 5---------");
