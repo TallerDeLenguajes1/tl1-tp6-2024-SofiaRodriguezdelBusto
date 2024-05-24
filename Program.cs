@@ -240,7 +240,7 @@ Console.WriteLine("-------Ejercicio 5---------");
 
 Console.WriteLine("\nIngrese una dirección de una pagina web: ");
 string direccionWeb = Console.ReadLine();
-string formaValida = @"^(http|https|ftp|)\://|[a-zA-Z0-9\-\.]+\.[a-zA-Z](:[a-zA-Z0-9]*)?/?([a-zA-Z0-9\-\._\?\,\'/\\\+&amp;%\$#\=~])*[^\.\,\)\(\s]$";
+string formaValida = @"(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$";
 if (Regex.IsMatch(direccionWeb, formaValida, RegexOptions.IgnoreCase))
 {
    Console.WriteLine("\nLa direccion web ingresada es valida.");
@@ -251,7 +251,7 @@ if (Regex.IsMatch(direccionWeb, formaValida, RegexOptions.IgnoreCase))
 
 Console.WriteLine("\nIngrese un mail: ");
 string mail = Console.ReadLine();
-string mailValido = @"^[a-z0-9._-]+@[a-z0-9.-]+\.[a-zA-Z]{2,}(.[a-z])?$";
+string mailValido = @"^[\w._%+-]+@[\w.-]+\.[a-zA-Z]{2,4}$";
 
 if (Regex.IsMatch(mail, mailValido, RegexOptions.IgnoreCase))
 {
